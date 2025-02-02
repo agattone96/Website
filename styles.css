@@ -1,0 +1,19 @@
+.career-chart {
+    background: #222;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.career-chart ul {
+    list-style: none;
+    padding: 0;
+}
+
+.career-chart li {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #ffcc00;
+}
