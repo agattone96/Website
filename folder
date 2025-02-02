@@ -1,0 +1,20 @@
+/portfolio-website/
+├── /assets/
+│   ├── /images/          # Image files
+│   ├── /fonts/           # Custom fonts
+│   ├── /logos/           # Brand logos
+├── /projects/            # Each project has its own subfolder
+│   ├── /popping-peppers/
+│   ├── /alli-draws/
+│   ├── /brand-collabs/
+├── /css/
+│   └── styles.css        # Main stylesheet
+├── /js/
+│   └── main.js           # JavaScript functionalities
+├── 404.html              # Custom 404 error page
+├── index.html            # Main homepage
+├── about.html            # About page with resume highlights
+├── portfolio.html        # Structured projects showcase
+├── contact.html          # Contact page
+├── sitemap.xml           # SEO Sitemap
+└── README.md             # Documentation
