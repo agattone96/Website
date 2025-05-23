@@ -3,43 +3,199 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Alli Draws</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Portfolio | Gattone Studios - Creative Direction & Branding Work</title>
+    <meta name="description" content="View Gattone Studios creative portfolio featuring Popping Peppers designs, brand collaborations, and visual storytelling projects by Allison Gattone.">
+    <meta name="keywords" content="portfolio, creative direction, branding, Popping Peppers, design work, brand collaborations, visual storytelling">
+    <meta name="author" content="Allison Gattone">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://allisongattone.github.io/Website/portfolio.html">
+    <meta property="og:title" content="Portfolio | Gattone Studios - Creative Direction & Branding">
+    <meta property="og:description" content="Explore Gattone Studios creative portfolio featuring branding, design, and visual storytelling work.">
+    <meta property="og:image" content="https://allisongattone.github.io/Website/assets/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://allisongattone.github.io/Website/portfolio.html">
+    <meta property="twitter:title" content="Portfolio | Gattone Studios - Creative Direction & Branding">
+    <meta property="twitter:description" content="Explore Gattone Studios creative portfolio featuring branding, design, and visual storytelling work.">
+    <meta property="twitter:image" content="https://allisongattone.github.io/Website/assets/images/og-image.jpg">
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Lightbox2 for image gallery -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
+    
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
 
+    <!-- Theme Toggle Button -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light mode">
+        <span class="theme-toggle-icon">🌙</span>
+    </button>
+
     <header>
-        <h1>Portfolio</h1>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="assets/logos/gattone-studios-logo.png" alt="Gattone Studios Logo - Creative Portfolio of Allison Gattone" loading="lazy">
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html" aria-current="page">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section class="portfolio-intro">
-        <h2>Creative Direction & Branding</h2>
-        <p>As a **creative leader and branding expert**, I specialize in transforming ideas into **bold, impactful visuals**. My work spans branding, design, and strategic marketing.</p>
-    </section>
+    <main>
+        <section class="portfolio-intro" data-aos="fade-up">
+            <h1>Portfolio</h1>
+            <h2>Creative Direction & Brand Excellence</h2>
+            <p>At <strong>Gattone Studios</strong>, I specialize in transforming ideas into <strong>bold, impactful visual experiences</strong>. My work spans strategic branding, compelling design, and innovative visual storytelling.</p>
+        </section>
 
-    <section class="portfolio">
-        <h2>Popping Peppers Designs</h2>
-        <div class="gallery">
-            <img src="assets/images/poppingpeppers1.jpg" alt="Spicy Sauce Design">
-            <img src="assets/images/poppingpeppers2.jpg" alt="Hot Sauce Label">
-        </div>
+        <section class="portfolio-filter" data-aos="fade-up">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Work</button>
+                <button class="filter-btn" data-filter="branding">Branding</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+                <button class="filter-btn" data-filter="art">Artwork</button>
+            </div>
+        </section>
 
-        <h2>Alli Draws Art</h2>
-        <div class="gallery">
-            <img src="assets/images/art1.jpg" alt="Character Sketch">
-            <img src="assets/images/art2.jpg" alt="Detailed Eye Drawing">
-        </div>
+        <section class="portfolio">
+            <div class="portfolio-category" data-aos="fade-up">
+                <h2>Popping Peppers Brand Design</h2>
+                <p class="category-description">Complete brand identity and packaging design for a specialty hot sauce company, featuring bold typography and vibrant visual elements that capture the product's fiery personality.</p>
+                <div class="gallery" data-filter-category="branding design">
+                    <div class="gallery-item">
+                        <a href="assets/images/poppingpeppers1.webp" data-lightbox="popping-peppers" data-title="Popping Peppers - Spicy sauce design featuring bold typography and vibrant pepper graphics">
+                            <img src="assets/images/poppingpeppers1.webp" alt="Spicy sauce design featuring bold typography and vibrant pepper graphics" loading="lazy">
+                            <div class="gallery-overlay">
+                                <span class="gallery-icon">🔍</span>
+                                <p>View Details</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="assets/images/poppingpeppers2.webp" data-lightbox="popping-peppers" data-title="Popping Peppers - Hot sauce label design with modern branding and eye-catching color scheme">
+                            <img src="assets/images/poppingpeppers2.webp" alt="Hot sauce label design with modern branding and eye-catching color scheme" loading="lazy">
+                            <div class="gallery-overlay">
+                                <span class="gallery-icon">🔍</span>
+                                <p>View Details</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
 
-        <h2>Brand Collaborations</h2>
-        <div class="gallery">
-            <img src="assets/images/staxx_branding.jpg" alt="Staxx Branding">
-            <img src="assets/images/tuneup_logo.jpg" alt="Tune Up Salon Logo">
-        </div>
-    </section>
+            <div class="portfolio-category" data-aos="fade-up">
+                <h2>Artistic Illustrations</h2>
+                <p class="category-description">Original artwork showcasing technical skill and creative vision, from detailed character studies to realistic portraits that demonstrate artistic versatility and attention to detail.</p>
+                <div class="gallery" data-filter-category="art">
+                    <div class="gallery-item">
+                        <a href="assets/images/art1.webp" data-lightbox="artwork" data-title="Character Sketch - Detailed illustration showcasing artistic skill and creative vision">
+                            <img src="assets/images/art1.webp" alt="Detailed character sketch showcasing artistic illustration skills" loading="lazy">
+                            <div class="gallery-overlay">
+                                <span class="gallery-icon">🔍</span>
+                                <p>View Details</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="assets/images/art2.webp" data-lightbox="artwork" data-title="Realistic Eye Drawing - Demonstrating fine art technique and attention to detail">
+                            <img src="assets/images/art2.webp" alt="Realistic eye drawing demonstrating fine art technique and attention to detail" loading="lazy">
+                            <div class="gallery-overlay">
+                                <span class="gallery-icon">🔍</span>
+                                <p>View Details</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-category" data-aos="fade-up">
+                <h2>Brand Collaborations</h2>
+                <p class="category-description">Strategic brand partnerships and identity development projects that showcase the power of cohesive visual communication and strategic design thinking.</p>
+                <div class="gallery" data-filter-category="branding">
+                    <div class="gallery-item">
+                        <a href="assets/images/staxx_branding.webp" data-lightbox="collaborations" data-title="Staxx Branding - Modern brand identity design featuring contemporary logo and visual elements">
+                            <img src="assets/images/staxx_branding.webp" alt="Staxx brand identity design featuring modern logo and visual elements" loading="lazy">
+                            <div class="gallery-overlay">
+                                <span class="gallery-icon">🔍</span>
+                                <p>View Details</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <a href="assets/images/tuneup_logo.webp" data-lightbox="collaborations" data-title="Tune Up Salon - Professional logo design with contemporary styling and brand appeal">
+                            <img src="assets/images/tuneup_logo.webp" alt="Tune Up Salon logo design with contemporary styling and professional appeal" loading="lazy">
+                            <div class="gallery-overlay">
+                                <span class="gallery-icon">🔍</span>
+                                <p>View Details</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="portfolio-cta" data-aos="fade-up">
+            <h2>Ready to Start Your Project?</h2>
+            <p>Let's collaborate to create something extraordinary that elevates your brand and resonates with your audience.</p>
+            <div class="cta-buttons">
+                <a href="contact.html" class="cta-button">Start Your Project</a>
+                <a href="services.html" class="cta-button secondary">View Services</a>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <p>© 2025 Allison Gattone | All Rights Reserved</p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Gattone Studios</h3>
+                <p>Creative excellence in branding, design, and visual storytelling.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/allison-gattone" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">LinkedIn</a>
+                    <a href="https://gattone-cosmicstudios-18.lovable.app" target="_blank" rel="noopener noreferrer" aria-label="Portfolio Website">Portfolio</a>
+                    <a href="mailto:allisongattone@gmail.com" aria-label="Email Contact">Email</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Gattone Studios | All Rights Reserved</p>
+        </div>
     </footer>
 
+    <!-- Lightbox2 for image gallery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+    
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>

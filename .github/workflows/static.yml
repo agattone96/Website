@@ -22,8 +22,33 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  # Validation job
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      
+      - name: Install validation tools
+        run: |
+          npm install -g htmlhint stylelint stylelint-config-standard
+      
+      - name: Validate HTML
+        run: |
+          htmlhint "*.html"
+      
+      - name: Validate CSS
+        run: |
+          stylelint "assets/css/*.css" --config-basedir ./
+
   # Single deploy job since we're just deploying
   deploy:
+    needs: validate
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

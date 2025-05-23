@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Gattone Studios - Get In Touch</title>
+    <meta name="description" content="Contact Gattone Studios for creative services, branding, design, and marketing strategy. Get in touch with Allison Gattone to discuss your project needs.">
+    <meta name="keywords" content="contact, Gattone Studios, creative services, project inquiry, branding consultation, design services">
+    <meta name="author" content="Allison Gattone">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://allisongattone.github.io/Website/contact.html">
+    <meta property="og:title" content="Contact | Gattone Studios - Get In Touch">
+    <meta property="og:description" content="Contact Gattone Studios for creative services, branding, design, and marketing strategy consultations.">
+    <meta property="og:image" content="https://allisongattone.github.io/Website/assets/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://allisongattone.github.io/Website/contact.html">
+    <meta property="twitter:title" content="Contact | Gattone Studios - Get In Touch">
+    <meta property="twitter:description" content="Contact Gattone Studios for creative services, branding, design, and marketing strategy consultations.">
+    <meta property="twitter:image" content="https://allisongattone.github.io/Website/assets/images/og-image.jpg">
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+    <!-- Theme Toggle Button -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light mode">
+        <span class="theme-toggle-icon">🌙</span>
+    </button>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="assets/logos/gattone-studios-logo.png" alt="Gattone Studios Logo - Creative Portfolio of Allison Gattone" loading="lazy">
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html" aria-current="page">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-hero" data-aos="fade-up">
+            <div class="contact-hero-content">
+                <h1>Let's Create Something Amazing</h1>
+                <p>Ready to elevate your brand? I'd love to hear about your project and explore how Gattone Studios can bring your vision to life.</p>
+            </div>
+        </section>
+
+        <section class="contact-content">
+            <div class="contact-form-section" data-aos="fade-right">
+                <h2>Start Your Project</h2>
+                <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required aria-describedby="name-help">
+                        <small id="name-help">How should I address you?</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required aria-describedby="email-help">
+                        <small id="email-help">I'll use this to get back to you</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="company">Company/Organization</label>
+                        <input type="text" id="company" name="company" aria-describedby="company-help">
+                        <small id="company-help">Optional - if applicable</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="service">Service Interest</label>
+                        <select id="service" name="service" aria-describedby="service-help">
+                            <option value="">Select a service</option>
+                            <option value="branding">Brand Identity & Design</option>
+                            <option value="marketing">Marketing Strategy</option>
+                            <option value="visual-storytelling">Visual Storytelling</option>
+                            <option value="creative-direction">Creative Direction</option>
+                            <option value="consultation">General Consultation</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <small id="service-help">What type of project are you considering?</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="budget">Project Budget Range</label>
+                        <select id="budget" name="budget" aria-describedby="budget-help">
+                            <option value="">Select budget range</option>
+                            <option value="under-5k">Under $5,000</option>
+                            <option value="5k-10k">$5,000 - $10,000</option>
+                            <option value="10k-25k">$10,000 - $25,000</option>
+                            <option value="25k-plus">$25,000+</option>
+                            <option value="discuss">Let's discuss</option>
+                        </select>
+                        <small id="budget-help">Helps me understand project scope</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="timeline">Project Timeline</label>
+                        <select id="timeline" name="timeline" aria-describedby="timeline-help">
+                            <option value="">Select timeline</option>
+                            <option value="asap">ASAP</option>
+                            <option value="1-month">Within 1 month</option>
+                            <option value="2-3-months">2-3 months</option>
+                            <option value="3-6-months">3-6 months</option>
+                            <option value="6-plus-months">6+ months</option>
+                            <option value="flexible">Flexible</option>
+                        </select>
+                        <small id="timeline-help">When would you like to start?</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Project Details *</label>
+                        <textarea id="message" name="message" rows="6" required aria-describedby="message-help" placeholder="Tell me about your project, goals, target audience, and any specific requirements or ideas you have in mind..."></textarea>
+                        <small id="message-help">The more details, the better I can help you</small>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+                        <label for="newsletter">I'd like to receive occasional updates about Gattone Studios and creative industry insights</label>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+
+            <div class="contact-info-section" data-aos="fade-left">
+                <h2>Get In Touch</h2>
+                
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <div class="contact-icon">📧</div>
+                        <h3>Email</h3>
+                        <p><a href="mailto:allisongattone@gmail.com">allisongattone@gmail.com</a></p>
+                        <small>Best for detailed project discussions</small>
+                    </div>
+
+                    <div class="contact-method">
+                        <div class="contact-icon">💼</div>
+                        <h3>LinkedIn</h3>
+                        <p><a href="https://www.linkedin.com/in/allison-gattone" target="_blank" rel="noopener noreferrer">Connect with me</a></p>
+                        <small>Professional networking and updates</small>
+                    </div>
+
+                    <div class="contact-method">
+                        <div class="contact-icon">🌐</div>
+                        <h3>Extended Portfolio</h3>
+                        <p><a href="https://gattone-cosmicstudios-18.lovable.app" target="_blank" rel="noopener noreferrer">View more work</a></p>
+                        <small>Additional projects and case studies</small>
+                    </div>
+                </div>
+
+                <div class="response-time">
+                    <h3>Response Time</h3>
+                    <p>I typically respond to inquiries within <strong>24-48 hours</strong>. For urgent projects, please mention it in your message.</p>
+                </div>
+
+                <div class="consultation-info">
+                    <h3>Free Consultation</h3>
+                    <p>I offer a complimentary 30-minute consultation to discuss your project needs and explore how we can work together.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Gattone Studios</h3>
+                <p>Creative excellence in branding, design, and visual storytelling.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/allison-gattone" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">LinkedIn</a>
+                    <a href="https://gattone-cosmicstudios-18.lovable.app" target="_blank" rel="noopener noreferrer" aria-label="Portfolio Website">Portfolio</a>
+                    <a href="mailto:allisongattone@gmail.com" aria-label="Email Contact">Email</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Gattone Studios | All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

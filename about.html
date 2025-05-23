@@ -3,46 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | Alli Draws</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>About Allison Gattone | Gattone Studios - Creative Visionary & Brand Builder</title>
+    <meta name="description" content="Learn about Allison Gattone, founder of Gattone Studios. Creative visionary and brand builder specializing in design, marketing strategy, and visual storytelling. Award-winning professional with Girl Scouts Gold Award and Mock Trial Best Lawyer Award.">
+    <meta name="keywords" content="Allison Gattone, about, Gattone Studios, creative director, brand builder, marketing strategist, Girl Scouts Gold Award, Mock Trial">
+    <meta name="author" content="Allison Gattone">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://allisongattone.github.io/Website/about.html">
+    <meta property="og:title" content="About Allison Gattone | Gattone Studios - Creative Visionary & Brand Builder">
+    <meta property="og:description" content="Learn about Allison Gattone's background in creative direction, branding, and marketing strategy at Gattone Studios.">
+    <meta property="og:image" content="https://allisongattone.github.io/Website/assets/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://allisongattone.github.io/Website/about.html">
+    <meta property="twitter:title" content="About Allison Gattone | Gattone Studios - Creative Visionary & Brand Builder">
+    <meta property="twitter:description" content="Learn about Allison Gattone's background in creative direction, branding, and marketing strategy at Gattone Studios.">
+    <meta property="twitter:image" content="https://allisongattone.github.io/Website/assets/images/og-image.jpg">
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
 
+    <!-- Theme Toggle Button -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light mode">
+        <span class="theme-toggle-icon">🌙</span>
+    </button>
+
     <header>
-        <h1>About Me</h1>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="assets/logos/gattone-studios-logo.png" alt="Gattone Studios Logo - Creative Portfolio of Allison Gattone" loading="lazy">
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" aria-current="page">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section class="about">
-        <img src="assets/images/allisonheadshot.jpg" alt="Allison Gattone">
-        <p>Hi, I’m **Allison Gattone**, a **creative visionary, brand builder, and artist** specializing in **design, marketing, and branding**.</p>
+    <main>
+        <section class="about" data-aos="fade-up">
+            <h1>About Me</h1>
+            
+            <div class="about-hero" data-aos="fade-right">
+                <img src="assets/images/allisonheadshot.webp" alt="Professional headshot of Allison Gattone, founder of Gattone Studios and creative director" loading="lazy">
+                <div class="about-intro">
+                    <p>Hi, I'm <strong>Allison Gattone</strong>, founder of <strong>Gattone Studios</strong> — a <strong>creative visionary, brand builder, and strategic storyteller</strong> specializing in <strong>design, marketing strategy, and visual storytelling</strong>.</p>
+                </div>
+            </div>
 
-        <h3>🔹 Work & Career Strengths</h3>
-        <p>Based on my **career aptitude test**, my work style is best suited for:  
-        **Strategizing, Managing, and Influencing**. I excel in leadership roles where **creativity meets business**.</p>
+            <div class="achievements-section" data-aos="fade-up">
+                <h2>🏆 Awards & Recognition</h2>
+                <div class="achievements-grid">
+                    <div class="achievement-card" data-aos="zoom-in">
+                        <h3>Girl Scouts Gold Award</h3>
+                        <p>The highest achievement in Girl Scouting, recognizing leadership and community impact through sustainable change.</p>
+                    </div>
+                    <div class="achievement-card" data-aos="zoom-in" data-aos-delay="100">
+                        <h3>Mock Trial Best Lawyer Award</h3>
+                        <p>Recognized for exceptional advocacy skills, strategic thinking, and persuasive communication in competitive legal simulation.</p>
+                    </div>
+                    <div class="achievement-card" data-aos="zoom-in" data-aos-delay="200">
+                        <h3>Coursera Certifications</h3>
+                        <p>Continuously expanding expertise through professional development in digital marketing, design thinking, and business strategy.</p>
+                    </div>
+                </div>
+            </div>
 
-        <div class="career-chart">
-            <h4>Career Interests Breakdown</h4>
-            <ul>
-                <li><strong>Persuading (100%)</strong> - **Leadership, Branding, PR, Marketing**</li>
-                <li><strong>Creating (94%)</strong> - **Art, Design, Digital Strategy**</li>
-                <li><strong>Helping (69%)</strong> - **Client Engagement, Team Management**</li>
-                <li><strong>Organizing (60%)</strong> - **Brand Structuring, Content Planning**</li>
-            </ul>
-        </div>
+            <div class="career-strengths" data-aos="fade-up">
+                <h2>🔹 Work & Career Strengths</h2>
+                <p>Based on my <strong>career aptitude assessment</strong>, my work style excels in:  
+                <strong>Strategizing, Managing, and Influencing</strong>. I thrive in leadership roles where <strong>creativity meets business strategy</strong>.</p>
 
-        <h3>🔹 Resume Highlights</h3>
-        <ul>
-            <li><strong>SC Liquidator</strong> – Executive Assistant | **Optimized branding & marketing**.</li>
-            <li><strong>Beasley Media Group</strong> – Digital Client Manager | **Increased engagement by 20%**.</li>
-            <li><strong>Tune Up The Manly Salon</strong> – **Brand & Advertising Strategist**.</li>
-        </ul>
+                <div class="career-chart" data-aos="slide-up">
+                    <h3>Career Interests Breakdown</h3>
+                    <ul>
+                        <li><strong>Persuading (100%)</strong> - <strong>Leadership, Branding, PR, Marketing Strategy</strong></li>
+                        <li><strong>Creating (94%)</strong> - <strong>Art, Design, Digital Strategy, Visual Storytelling</strong></li>
+                        <li><strong>Helping (69%)</strong> - <strong>Client Engagement, Team Management, Mentorship</strong></li>
+                        <li><strong>Organizing (60%)</strong> - <strong>Brand Structuring, Content Planning, Project Management</strong></li>
+                    </ul>
+                </div>
+            </div>
 
-        <a href="AllisonGattone5125036.pdf" class="btn">Download Full Resume</a>
-    </section>
+            <div class="experience-section" data-aos="fade-up">
+                <h2>🔹 Professional Experience</h2>
+                <div class="experience-timeline">
+                    <div class="experience-item" data-aos="slide-right">
+                        <h3>SC Liquidator</h3>
+                        <h4>Executive Assistant</h4>
+                        <p><strong>Optimized branding & marketing strategies</strong>, streamlined operations, and enhanced client communications.</p>
+                    </div>
+                    <div class="experience-item" data-aos="slide-right" data-aos-delay="100">
+                        <h3>Beasley Media Group</h3>
+                        <h4>Digital Client Manager</h4>
+                        <p><strong>Increased client engagement by 20%</strong> through strategic digital campaigns and relationship management.</p>
+                    </div>
+                    <div class="experience-item" data-aos="slide-right" data-aos-delay="200">
+                        <h3>Tune Up The Manly Salon</h3>
+                        <h4>Brand & Advertising Strategist</h4>
+                        <p>Developed comprehensive brand identity and advertising campaigns that elevated market presence.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="resume-section" data-aos="fade-up">
+                <h2>📄 Resume & Portfolio</h2>
+                <div class="download-buttons">
+                    <a href="downloads/AllisonGattone-Resume-2025.pdf" class="btn download-btn" aria-label="Download Allison Gattone's full resume PDF" download>
+                        <span class="btn-icon">📄</span>
+                        Download Full Resume
+                    </a>
+                    <a href="https://gattone-cosmicstudios-18.lovable.app" target="_blank" rel="noopener noreferrer" class="btn portfolio-btn" aria-label="View extended portfolio website">
+                        <span class="btn-icon">🌐</span>
+                        Extended Portfolio
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <p>© 2025 Allison Gattone | All Rights Reserved</p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Gattone Studios</h3>
+                <p>Creative excellence in branding, design, and visual storytelling.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/allison-gattone" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">LinkedIn</a>
+                    <a href="https://gattone-cosmicstudios-18.lovable.app" target="_blank" rel="noopener noreferrer" aria-label="Portfolio Website">Portfolio</a>
+                    <a href="mailto:allisongattone@gmail.com" aria-label="Email Contact">Email</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Gattone Studios | All Rights Reserved</p>
+        </div>
     </footer>
 
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>

@@ -3,38 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Allison Gattone | Alli Draws</title>
-    <meta name="description" content="Creative Portfolio of Allison Gattone, showcasing Alli Draws, branding, and Popping Peppers.">
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Allison Gattone | Gattone Studios - Creative Portfolio & Branding Expert</title>
+    <meta name="description" content="Gattone Studios - Creative Portfolio of Allison Gattone, specializing in branding, design, marketing strategy, and visual storytelling. Professional creative services and artistic excellence.">
+    <meta name="keywords" content="Allison Gattone, Gattone Studios, branding, design, portfolio, creative director, marketing strategy, visual storytelling">
+    <meta name="author" content="Allison Gattone">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://allisongattone.github.io/Website/">
+    <meta property="og:title" content="Allison Gattone | Gattone Studios - Creative Portfolio">
+    <meta property="og:description" content="Gattone Studios - Creative Portfolio showcasing branding, design, marketing strategy, and visual storytelling by Allison Gattone.">
+    <meta property="og:image" content="https://allisongattone.github.io/Website/assets/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://allisongattone.github.io/Website/">
+    <meta property="twitter:title" content="Allison Gattone | Gattone Studios - Creative Portfolio">
+    <meta property="twitter:description" content="Gattone Studios - Creative Portfolio showcasing branding, design, marketing strategy, and visual storytelling by Allison Gattone.">
+    <meta property="twitter:image" content="https://allisongattone.github.io/Website/assets/images/og-image.jpg">
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
+
+    <!-- Theme Toggle Button -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light mode">
+        <span class="theme-toggle-icon">🌙</span>
+    </button>
 
     <header>
         <nav class="navbar">
             <div class="logo">
-                <img src="assets/logos/allilogo.png" alt="Alli Draws Logo">
+                <img src="assets/logos/gattone-studios-logo.png" alt="Gattone Studios Logo - Creative Portfolio of Allison Gattone" loading="lazy">
             </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html" aria-current="page">Home</a></li>
                 <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Designing Ideas That Ignite</h1>
-            <p>Bringing brands to life through art, branding, and bold visuals.</p>
-            <a href="portfolio.html" class="cta-button">Explore My Work</a>
-        </div>
-    </section>
+    <main>
+        <section class="hero" data-aos="fade-up">
+            <div class="hero-content">
+                <h1>Designing Ideas That Ignite</h1>
+                <p>Gattone Studios brings brands to life through strategic design, compelling storytelling, and bold visual experiences.</p>
+                <div class="hero-buttons">
+                    <a href="portfolio.html" class="cta-button" aria-label="View Gattone Studios creative portfolio">Explore My Work</a>
+                    <a href="services.html" class="cta-button secondary" aria-label="Learn about Gattone Studios services">Our Services</a>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <p>© 2025 Allison Gattone | All Rights Reserved</p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Gattone Studios</h3>
+                <p>Creative excellence in branding, design, and visual storytelling.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/allison-gattone" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">LinkedIn</a>
+                    <a href="https://gattone-cosmicstudios-18.lovable.app" target="_blank" rel="noopener noreferrer" aria-label="Portfolio Website">Portfolio</a>
+                    <a href="mailto:allisongattone@gmail.com" aria-label="Email Contact">Email</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Gattone Studios | All Rights Reserved</p>
+        </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
