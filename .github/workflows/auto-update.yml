@@ -1,0 +1,133 @@
+name: Auto-Update README and Version
+
+on:
+  push:
+    branches: ["main"]
+    paths-ignore:
+      - '.github/workflows/auto-update.yml'
+      - 'README.md'
+  
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  auto-update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Configure Git
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+      - name: Analyze changes and update version
+        id: update-version
+        run: |
+          # Get current version from package.json
+          CURRENT_VERSION=$(node -p "require('./package.json').version")
+          README_COUNT=$(node -p "require('./package.json').readmeUpdateCount || 0")
+          
+          # Get files changed in the last commit
+          CHANGED_FILES=$(git diff --name-only HEAD~1 HEAD || echo "")
+          
+          echo "Changed files: $CHANGED_FILES"
+          echo "Current version: $CURRENT_VERSION"
+          echo "README update count: $README_COUNT"
+          
+          # Determine version increment based on changes
+          MAJOR=$(echo $CURRENT_VERSION | cut -d. -f1)
+          MINOR=$(echo $CURRENT_VERSION | cut -d. -f2)
+          PATCH=$(echo $CURRENT_VERSION | cut -d. -f3)
+          
+          # Check for significant changes
+          if echo "$CHANGED_FILES" | grep -E "\.(html|css|js)$" > /dev/null; then
+            if echo "$CHANGED_FILES" | grep -E "index\.html|package\.json" > /dev/null; then
+              # Minor version bump for significant changes
+              MINOR=$((MINOR + 1))
+              PATCH=0
+            else
+              # Patch version bump for small changes
+              PATCH=$((PATCH + 1))
+            fi
+          else
+            # Patch version bump for other changes
+            PATCH=$((PATCH + 1))
+          fi
+          
+          NEW_VERSION="$MAJOR.$MINOR.$PATCH"
+          NEW_README_COUNT=$((README_COUNT + 1))
+          
+          echo "NEW_VERSION=$NEW_VERSION" >> $GITHUB_OUTPUT
+          echo "NEW_README_COUNT=$NEW_README_COUNT" >> $GITHUB_OUTPUT
+          echo "CHANGED_FILES=$CHANGED_FILES" >> $GITHUB_OUTPUT
+
+      - name: Update package.json
+        run: |
+          # Update version and README count in package.json
+          node -e "
+            const pkg = require('./package.json');
+            pkg.version = '${{ steps.update-version.outputs.NEW_VERSION }}';
+            pkg.readmeUpdateCount = ${{ steps.update-version.outputs.NEW_README_COUNT }};
+            require('fs').writeFileSync('./package.json', JSON.stringify(pkg, null, 2) + '\n');
+          "
+
+      - name: Update README.md
+        run: |
+          # Get current date
+          CURRENT_DATE=$(date +"%Y-%m-%d")
+          
+          # Create change summary
+          CHANGED_FILES="${{ steps.update-version.outputs.CHANGED_FILES }}"
+          if [ -n "$CHANGED_FILES" ]; then
+            CHANGE_SUMMARY="Recent changes: $(echo "$CHANGED_FILES" | tr '\n' ', ' | sed 's/,$//')"
+          else
+            CHANGE_SUMMARY="Minor updates and improvements"
+          fi
+          
+          # Update README with new version info
+          sed -i "s/\*\*Version:\*\* [0-9]\+\.[0-9]\+\.[0-9]\+/**Version:** ${{ steps.update-version.outputs.NEW_VERSION }}/g" README.md
+          sed -i "s/\*\*Last Updated:\*\* [0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}/**Last Updated:** $CURRENT_DATE/g" README.md
+          sed -i "s/\*\*README Updates:\*\* [0-9]\+/**README Updates:** ${{ steps.update-version.outputs.NEW_README_COUNT }}/g" README.md
+          sed -i "s/\*\*README Update Count:\*\* [0-9]\+/**README Update Count:** ${{ steps.update-version.outputs.NEW_README_COUNT }}/g" README.md
+          sed -i "s/\*\*Last Code Change:\*\* .*/**Last Code Change:** $CHANGE_SUMMARY/g" README.md
+          sed -i "s/\*This README was last automatically updated on [0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}\*/*This README was last automatically updated on $CURRENT_DATE*/g" README.md
+          
+          # Add new version to history if it's a significant change
+          if [[ "${{ steps.update-version.outputs.NEW_VERSION }}" != *".0" ]]; then
+            # Create temporary file with new version entry
+            echo "" > /tmp/version_entry.txt
+            echo "### v${{ steps.update-version.outputs.NEW_VERSION }} - $(date +\"%Y-%m-%d\")" >> /tmp/version_entry.txt
+            echo "- $CHANGE_SUMMARY" >> /tmp/version_entry.txt
+            
+            # Insert new version entry after the "## 📈 Version History" line
+            sed -i "/## 📈 Version History/r /tmp/version_entry.txt" README.md
+          fi
+
+      - name: Commit and push changes
+        run: |
+          if [[ -n $(git status --porcelain) ]]; then
+            git add package.json README.md
+            git commit -m "Auto-update: Version ${{ steps.update-version.outputs.NEW_VERSION }} - README update #${{ steps.update-version.outputs.NEW_README_COUNT }}"
+            git push
+            echo "Changes committed and pushed successfully"
+          else
+            echo "No changes to commit"
+          fi
+
+      - name: Create release tag
+        if: contains(steps.update-version.outputs.NEW_VERSION, '.0.0') || contains(steps.update-version.outputs.NEW_VERSION, '.0')
+        run: |
+          git tag "v${{ steps.update-version.outputs.NEW_VERSION }}"
+          git push origin "v${{ steps.update-version.outputs.NEW_VERSION }}"
