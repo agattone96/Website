@@ -1,0 +1,30 @@
+{
+  "name": "gattone-studios-website",
+  "version": "1.0.0",
+  "description": "Gattone Studios - Creative Portfolio of Allison Gattone, specializing in branding, design, marketing strategy, and visual storytelling",
+  "main": "index.html",
+  "scripts": {
+    "validate": "htmlhint \"*.html\" && stylelint \"assets/css/*.css\" --config-basedir ./",
+    "start": "python -m http.server 8000",
+    "deploy": "echo 'Deploy to GitHub Pages'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/agattone96/Website.git"
+  },
+  "keywords": [
+    "portfolio",
+    "website",
+    "creative",
+    "branding",
+    "design"
+  ],
+  "author": "Allison Gattone",
+  "license": "MIT",
+  "devDependencies": {
+    "htmlhint": "^1.1.4",
+    "stylelint": "^15.11.0",
+    "stylelint-config-standard": "^34.0.0"
+  },
+  "readmeUpdateCount": 0
+}
